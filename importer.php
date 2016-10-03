@@ -121,7 +121,7 @@ class IteratorFactory
 # Entry point
 class Controller
 {
-    public function main()
+    public function __construct()
     {
         $rows = CsvReader::getRows();
         $iterator = IteratorFactory::create();
@@ -130,5 +130,3 @@ class Controller
 }
 
 $controller = new Controller;
-
-$controller->main();
